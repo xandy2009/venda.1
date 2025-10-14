@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado Online - Sua Loja Virtual</title>
+    <link rel="stylesheet" href="ia.css">
+</head>
+<body>
+    <header>
+        <h1>Mercado Online</h1>
+        <p>Sua loja virtual para compras rápidas e seguras!</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#products">Produtos</a></li>
+            <li><a href="#cart">Carrinho</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+    </nav>
+
+    <div class="container" id="home">
+        <h2>Bem-vindo ao Mercado Online</h2>
+        <p>Aqui você encontra uma variedade de produtos frescos e de qualidade. Navegue pela nossa seleção e adicione ao carrinho!</p>
+    </div>
+
+    <div class="container" id="products">
+        <h2>Nossos Produtos</h2>
+        <div class="products">
+            <div class="product">
+                <img src="https://via.placeholder.com/250x150?text=Maçã" alt="Maçã">
+                <h3>Maçã Orgânica</h3>
+                <p>R$ 2.99 / kg</p>
+                <button onclick="addToCart('Maçã Orgânica', 2.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/250x150?text=Banana" alt="Banana">
+                <h3>Banana Prata</h3>
+                <p>R$ 1.99 / dúzia</p>
+                <button onclick="addToCart('Banana Prata', 1.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/250x150?text=Leite" alt="Leite">
+                <h3>Leite Integral</h3>
+                <p>R$ 4.50 / litro</p>
+                <button onclick="addToCart('Leite Integral', 4.50)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/250x150?text=Arroz" alt="Arroz">
+                <h3>Arroz Branco</h3>
+                <p>R$ 5.99 / kg</p>
+                <button onclick="addToCart('Arroz Branco', 5.99)">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="cart">
+        <h2>Carrinho de Compras</h2>
+        <ul id="cart-items"></ul>
+        <p id="total">Total: R$ 0.00</p>
+        <button onclick="checkout()">Finalizar Compra</button>
+    </div>
+
+    <div class="container" id="contact">
+        <h2>Contato</h2>
+        <p>Entre em contato conosco: contato@mercadoonline.com</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Mercado Online. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="ia.js"></script>
+</body>
+</html>
