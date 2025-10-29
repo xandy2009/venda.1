@@ -1,78 +1,177 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mercado Online - Sua Loja Virtual</title>
-    <link rel="stylesheet" href="ia.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Street Holy</title>
+    <meta name="description" content="Street Holy - Moda urbana com atitude e estilo.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <header>
-        <h1>Mercado Online</h1>
-        <p>Sua loja virtual para compras rápidas e seguras!</p>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="#home">Início</a></li>
-            <li><a href="#products">Produtos</a></li>
-            <li><a href="#cart">Carrinho</a></li>
-            <li><a href="#contact">Contato</a></li>
-        </ul>
-    </nav>
-
-    <div class="container" id="home">
-        <h2>Bem-vindo ao Mercado Online</h2>
-        <p>Aqui você encontra uma variedade de produtos frescos e de qualidade. Navegue pela nossa seleção e adicione ao carrinho!</p>
-    </div>
-
-    <div class="container" id="products">
-        <h2>Nossos Produtos</h2>
-        <div class="products">
-            <div class="product">
-                <img src="https://via.placeholder.com/250x150?text=Maçã" alt="Maçã">
-                <h3>Maçã Orgânica</h3>
-                <p>R$ 2.99 / kg</p>
-                <button onclick="addToCart('Maçã Orgânica', 2.99)">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product">
-                <img src="https://via.placeholder.com/250x150?text=Banana" alt="Banana">
-                <h3>Banana Prata</h3>
-                <p>R$ 1.99 / dúzia</p>
-                <button onclick="addToCart('Banana Prata', 1.99)">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product">
-                <img src="https://via.placeholder.com/250x150?text=Leite" alt="Leite">
-                <h3>Leite Integral</h3>
-                <p>R$ 4.50 / litro</p>
-                <button onclick="addToCart('Leite Integral', 4.50)">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product">
-                <img src="https://via.placeholder.com/250x150?text=Arroz" alt="Arroz">
-                <h3>Arroz Branco</h3>
-                <p>R$ 5.99 / kg</p>
-                <button onclick="addToCart('Arroz Branco', 5.99)">Adicionar ao Carrinho</button>
-            </div>
+    <!-- Hamburger Button -->
+    <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="#" class="logo">
+                <i class="fas fa-cross"></i>
+                Street Holy
+            </a>
+            <button class="close-btn" id="closeBtn">
+                <i class="fas fa-times"></i>
+            </button>
         </div>
-    </div>
+        
+        <nav>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">
+                        <i class="fas fa-home"></i>
+                        <span>Início</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>Compras</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-tshirt"></i>
+                        <span>Coleções</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-star"></i>
+                        <span>Destaques</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-user"></i>
+                        <span>Minha Conta</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-headset"></i>
+                        <span>Suporte</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Header -->
+            <header class="header">
+                <h1>Street Holy</h1>
+                <p>Moda urbana com alma. Estilo que transcende, atitude que inspira.</p>
+            </header>
+            
+            <!-- Products Grid -->
+            <section class="cards-grid">
+                <article class="card">
+                    <div class="card-img"></div>
+                    <div class="card-body">
+                        <h3 class="card-title">Holy Cross Tee</h3>
+                        <p class="card-text">Camiseta premium em algodão orgânico com estampa exclusiva.</p>
+                        <div class="card-price">R$ 149,90</div>
+                        <button class="btn">Adicionar ao Carrinho</button>
+                    </div>
+                </article>
+                
+                <article class="card">
+                    <div class="card-img"></div>
+                    <div class="card-body">
+                        <h3 class="card-title">Urban Saint Hoodie</h3>
+                        <p class="card-text">Moletom oversize com capuz e detalhes refletivos.</p>
+                        <div class="card-price">R$ 289,90</div>
+                        <button class="btn">Adicionar ao Carrinho</button>
+                    </div>
+                </article>
+                
+                <article class="card">
+                    <div class="card-img"></div>
+                    <div class="card-body">
+                        <h3 class="card-title">Divine Denim</h3>
+                        <p class="card-text">Calça jeans destroyed com lavagem premium e patches.</p>
+                        <div class="card-price">R$ 399,90</div>
+                        <button class="btn">Adicionar ao Carrinho</button>
+                    </div>
+                </article>
+                
+                <article class="card">
+                    <div class="card-img"></div>
+                    <div class="card-body">
+                        <h3 class="card-title">Angel Wings Cap</h3>
+                        <p class="card-text">Boné trucker com bordado 3D e ajuste perfeito.</p>
+                        <div class="card-price">R$ 99,90</div>
+                        <button class="btn">Adicionar ao Carrinho</button>
+                    </div>
+                </article>
+                
+                <article class="card">
+                    <div class="card-img"></div>
+                    <div class="card-body">
+                        <h3 class="card-title">Sacred Sneakers</h3>
+                        <p class="card-text">Tênis limited edition com solado glow-in-the-dark.</p>
+                        <div class="card-price">R$ 649,90</div>
+                        <button class="btn btn-outline">Ver Detalhes</button>
+                    </div>
+                </article>
+                
+                <article class="card">
+                    <div class="card-img"></div>
+                    <div class="card-body">
+                        <h3 class="card-title">Holy Chain</h3>
+                        <p class="card-text">Corrente em aço inoxidável com pingente cruzado.</p>
+                        <div class="card-price">R$ 179,90</div>
+                        <button class="btn">Comprar Agora</button>
+                    </div>
+                </article>
+            </section>
+            
+            <!-- CTA Section -->
+            <section class="cta-section">
+                <h2>Seja Parte da Revolução</h2>
+                <p>Junte-se à comunidade Street Holy e receba 15% OFF na sua primeira compra.</p>
+                <button class="btn large">
+                    <i class="fas fa-envelope"></i> Inscrever-se
+                </button>
+            </section>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 <a href="#">Street Holy</a>. Todos os direitos reservados.</p>
+            <p>
+                <a href="#">Termos</a> • <a href="#">Privacidade</a> • <a href="#">Contato</a>
+            </p>
+        </footer>
+    </main>
 
-    <div class="container" id="cart">
-        <h2>Carrinho de Compras</h2>
-        <ul id="cart-items"></ul>
-        <p id="total">Total: R$ 0.00</p>
-        <button onclick="checkout()">Finalizar Compra</button>
-    </div>
-
-    <div class="container" id="contact">
-        <h2>Contato</h2>
-        <p>Entre em contato conosco: contato@mercadoonline.com</p>
-    </div>
-
-    <footer>
-        <p>&copy; 2025 Mercado Online. Todos os direitos reservados.</p>
-    </footer>
-
-    <script src="ia.js"></script>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
-
 </html>
